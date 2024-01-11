@@ -7,17 +7,15 @@ function getComputerChoice() {
     } if (number === 2) {
         return "Scissors";
     }
-}
-
-
-const playerSelection = prompt("Rock, Paper or Scissors?")
-const computerSelection = getComputerChoice();
-console.log(computerSelection)
-console.log(playerSelection)
+};
 
 function playRound(playerSelection, computerSelection) {
+   playerSelection = prompt("Rock, Paper or Scissors?")
+   computerSelection = getComputerChoice();
+   if (playerSelection.toLowerCase() == computerSelection.toLowerCase() ) {
+    return "It's a tie!";
+   } 
+};
 
-}
-
-console.log(getComputerChoice())
-
+console.log(getComputerChoice());
+console.log(playRound());
