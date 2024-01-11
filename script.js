@@ -21,11 +21,7 @@ function playRound(playerSelection, computerSelection) {
         return "You Win! :)"
     } if (playerSelection === "scissors" && computerSelection === "paper") {
         return "You Win! :)"
-    } if (playerSelection === "rock" && computerSelection === "paper") {
-        return "You Lose! :("
-    } if (playerSelection === "paper" && computerSelection === "scissors") {
-        return "You Lose! :("
-    } if (playerSelection === "scissors" && computerSelection === "rock") {
+    } else {
         return "You Lose! :("
     }
 };
