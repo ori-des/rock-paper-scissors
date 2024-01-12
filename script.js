@@ -46,8 +46,6 @@ function game() {
         result = "Player Wins!";
     } if (lose > win) {
         result = "Computer Wins!";
-    } if (win === lose) {
-        result = "Tied!";
     } return result;
 };
 
