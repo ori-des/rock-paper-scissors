@@ -12,7 +12,7 @@ function getComputerChoice() {
 function playRound(playerSelection, computerSelection) {
     playerSelection = prompt("Rock, Paper or Scissors?").toLowerCase();
     computerSelection = getComputerChoice();
-    console.log(computerSelection)
+    console.log(`You chose ${playerSelection} Computer chose ${computerSelection}!`)
     if (playerSelection === computerSelection) {
         return "It's a tie!";
     } if (playerSelection === "rock" && computerSelection === "scissors") {
