@@ -26,11 +26,11 @@ function playRound(playerSelection, computerSelection) {
     }
 };
 
-function game() {
+function playGame() {
     let win = 0;
     let lose = 0;
     let result = "";
-    for (let i = 0; i < 5; i++) {
+    for (let game = 0; game < 5; game++) {
         let gameResult = playRound();
         console.log(gameResult)
         if (gameResult === "You Win! :)") {
@@ -40,6 +40,7 @@ function game() {
             lose++;
             console.log(`Player ${win} Computer ${lose}`)
         } if (gameResult === "It's a tie!") {
+            game--;
             console.log(`Player ${win} Computer ${lose}`)
         }
     } if (win > lose) {
@@ -50,4 +51,4 @@ function game() {
 };
 
 
-console.log(game());
+console.log(playGame());
