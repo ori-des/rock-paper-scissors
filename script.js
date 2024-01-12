@@ -9,8 +9,16 @@ function getComputerChoice() {
     }
 };
 
+function getPlayerChoice() {
+    let playerSelection = prompt("Rock, Paper or Scissors?").toLowerCase()
+    while (playerSelection !== "rock" && playerSelection !== "paper" && playerSelection !== "scissors") {
+        alert("Insert Again!");
+        playerSelection = prompt("Rock, Paper or Scissors?").toLowerCase()
+    }   return playerSelection;
+};
+
 function playRound(playerSelection, computerSelection) {
-    playerSelection = prompt("Rock, Paper or Scissors?").toLowerCase();
+    playerSelection = getPlayerChoice();
     computerSelection = getComputerChoice();
     console.log(`You chose ${playerSelection} Computer chose ${computerSelection}!`)
     if (playerSelection === computerSelection) {
