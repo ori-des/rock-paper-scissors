@@ -18,11 +18,11 @@ function playRound(playerSelection, computerSelection) {
     } if (playerSelection === "rock" && computerSelection === "scissors") {
         return "You Win! :)";
     } if (playerSelection === "paper" && computerSelection === "rock") {
-        return "You Win! :)"
+        return "You Win! :)";
     } if (playerSelection === "scissors" && computerSelection === "paper") {
-        return "You Win! :)"
+        return "You Win! :)";
     } else {
-        return "You Lose! :("
+        return "You Lose! :(";
     }
 };
 
@@ -32,16 +32,16 @@ function playGame() {
     let result = "";
     for (let game = 0; game < 5; game++) {
         let gameResult = playRound();
-        console.log(gameResult)
+        console.log(gameResult);
         if (gameResult === "You Win! :)") {
             win++;
-            console.log(`Player ${win} Computer ${lose}`)
+            console.log(`Player ${win} Computer ${lose}`);
         } if (gameResult === "You Lose! :(") {
             lose++;
-            console.log(`Player ${win} Computer ${lose}`)
+            console.log(`Player ${win} Computer ${lose}`);
         } if (gameResult === "It's a tie!") {
             game--;
-            console.log(`Player ${win} Computer ${lose}`)
+            console.log(`Player ${win} Computer ${lose}`);
         }
     } if (win > lose) {
         result = "Player Wins!";
