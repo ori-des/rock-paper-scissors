@@ -30,6 +30,7 @@ function game() {
     let win = 0;
     let lose = 0;
     let tie = 0;
+    let result = "";
     for (let i = 0; i < 5; i++) {
         let gameResult = playRound();
         console.log(gameResult)
@@ -43,7 +44,13 @@ function game() {
             tie++
             console.log(tie)
         }
-    }
+    } if (win > lose) {
+        result = "Player Wins!";
+    } if (lose > win) {
+        result = "Computer Wins!";
+    } if (win === lose) {
+        result = "Tied!";
+    } return result;
 };
 
 
