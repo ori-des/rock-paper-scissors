@@ -30,13 +30,20 @@ function game() {
     let win = 0;
     let lose = 0;
     let tie = 0;
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 5; i++) {
         let gameResult = playRound();
         console.log(gameResult)
         if (gameResult === "You Win! :)") {
             win++;
+            console.log(win)
+        } if (gameResult === "You Lose! :(") {
+            lose++;
+            console.log(lose)
+        } if (gameResult === "It's a tie!") {
+            tie++
+            console.log(tie)
         }
-    } return win;
+    }
 };
 
 
