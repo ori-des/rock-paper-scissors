@@ -36,13 +36,13 @@ function game() {
         console.log(gameResult)
         if (gameResult === "You Win! :)") {
             win++;
-            console.log(win)
+            console.log(`Player ${win} Computer ${lose}`)
         } if (gameResult === "You Lose! :(") {
             lose++;
-            console.log(lose)
+            console.log(`Player ${win} Computer ${lose}`)
         } if (gameResult === "It's a tie!") {
             tie++
-            console.log(tie)
+            console.log(`Player ${win} Computer ${lose}`)
         }
     } if (win > lose) {
         result = "Player Wins!";
