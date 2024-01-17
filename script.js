@@ -54,11 +54,11 @@ function playRound(playerSelection, computerSelection) {
     content.textContent = `You chose ${playerSelection} Computer chose ${computerSelection}! 
     ${result} Player ${win} - Computer ${lose}`;
     
-    if (win === 5 && win > lose) {
+    if (win === 5) {
         win = 0;
         lose = 0;
         content.textContent = "Player Wins!";
-    } if (lose === 5 && lose > win) {
+    } if (lose === 5) {
         win = 0;
         lose = 0;
         content.textContent = "Computer Wins!";
