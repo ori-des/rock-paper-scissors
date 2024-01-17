@@ -9,18 +9,9 @@ function getComputerChoice() {
     }
 };
 
-let rockBtn = document.querySelector('#rock');
-let paperBtn = document.querySelector('#paper');
-let scissorsBtn = document.querySelector('#scissors');
-
-
-
 function getPlayerChoice() {
-    let playerSelection = prompt("Rock, Paper or Scissors?").toLowerCase()
-    while (playerSelection !== "rock" && playerSelection !== "paper" && playerSelection !== "scissors") {
-        alert("Insert Again!");
-        playerSelection = prompt("Rock, Paper or Scissors?").toLowerCase()
-    }   return playerSelection;
+    let playerSelection = rock.id;
+    return playerSelection;
 };
 
 function playRound(playerSelection, computerSelection) {
@@ -64,5 +55,17 @@ function playGame() {
     } return result;
 };
 
+function getAlert(e) {
+    console.log(e.target.id)
+    alert("!!!");
+}
 
-console.log(playRound());
+const rockBtn = document.querySelector(`#rock`);
+const paperBtn = document.querySelector(`#paper`);
+const scissorsBtn = document.querySelector(`#scissors`);
+
+// paper.addEventListener(`click`, playRound);
+// scissors.addEventListener(`click`, playRound);
+rock.addEventListener(`click`, playRound);
+paper.addEventListener(`click`, playRound);
+scissors.addEventListener(`click`, playRound);
