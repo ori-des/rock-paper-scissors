@@ -66,27 +66,3 @@ function playRound(playerSelection, computerSelection) {
      
     
 };
-
-function playGame() {
-    let win = 0;
-    let lose = 0;
-    let result = "";
-    for (let game = 0; game < 5; game++) {
-        let gameResult = playRound;
-        console.log(gameResult);
-        if (gameResult === "You Win! :)") {
-            win++;
-            console.log(`Player ${win} Computer ${lose}`);
-        } if (gameResult === "You Lose! :(") {
-            lose++;
-            console.log(`Player ${win} Computer ${lose}`);
-        } if (gameResult === "It's a tie!") {
-            game--;
-            console.log(`Player ${win} Computer ${lose}`);
-        }
-    } if (win > lose) {
-        result = "Player Wins!";
-    } if (lose > win) {
-        result = "Computer Wins!";
-    } return result;
-};
