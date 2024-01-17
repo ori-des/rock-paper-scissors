@@ -24,19 +24,26 @@ function getComputerChoice() {
 };
 
 function playRound(playerSelection, computerSelection) {
+    let result = "";
     computerSelection = getComputerChoice();
-    content.textContent = `You chose ${playerSelection} Computer chose ${computerSelection}!`
     if (playerSelection === computerSelection) {
-        return "It's a tie!";
+        result = "It's a tie!";
     } if (playerSelection === "rock" && computerSelection === "scissors") {
-        return "You Win! :)";
+        result = "You Win! :)";
     } if (playerSelection === "paper" && computerSelection === "rock") {
-        return "You Win! :)";
+        result = "You Win! :)";
     } if (playerSelection === "scissors" && computerSelection === "paper") {
-        return "You Win! :)";
-    } else {
-        return "You Lose! :(";
+        result = "You Win! :)";
+    } if (playerSelection === "scissors" && computerSelection === "rock") {
+        result = "You Lose! :(";
+    } if (playerSelection === "rock" && computerSelection === "paper") {
+        result = "You Lose! :(";
+    } if (playerSelection === "paper" && computerSelection === "scissors") {
+        result = "You Lose! :(";
     }
+     
+    
+    content.textContent = `You chose ${playerSelection} Computer chose ${computerSelection}! ${result}`
 };
 
 function playGame() {
