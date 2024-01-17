@@ -6,6 +6,12 @@ rockBtn.addEventListener(`click`, () => playRound('rock'));
 paperBtn.addEventListener(`click`, () => playRound('paper'));
 scissorsBtn.addEventListener(`click`, () => playRound('scissors'));
 
+const container = document.querySelector(`#container`);
+const content = document.createElement(`p`);
+content.classList.add(`content`);
+content.textContent = "Hi :)";
+container.appendChild(content);
+
 function getComputerChoice() {
     let number = Math.floor(Math.random() * 3);
     if (number === 0) {
@@ -19,7 +25,7 @@ function getComputerChoice() {
 
 function playRound(playerSelection, computerSelection) {
     computerSelection = getComputerChoice();
-    console.log(`You chose ${playerSelection} Computer chose ${computerSelection}!`)
+    content.textContent = `You chose ${playerSelection} Computer chose ${computerSelection}!`
     if (playerSelection === computerSelection) {
         return "It's a tie!";
     } if (playerSelection === "rock" && computerSelection === "scissors") {
@@ -38,7 +44,7 @@ function playGame() {
     let lose = 0;
     let result = "";
     for (let game = 0; game < 5; game++) {
-        let gameResult = playRound();
+        let gameResult = playRound;
         console.log(gameResult);
         if (gameResult === "You Win! :)") {
             win++;
