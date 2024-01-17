@@ -14,7 +14,6 @@ container.appendChild(content);
 
 let win = 0;
 let lose = 0;
-let game = 0;
 
 function getComputerChoice() {
     let number = Math.floor(Math.random() * 3);
@@ -32,43 +31,34 @@ function playRound(playerSelection, computerSelection) {
     computerSelection = getComputerChoice();
     if (playerSelection === computerSelection) {
         result = "It's a tie!";
-        game--;
     } if (playerSelection === "rock" && computerSelection === "scissors") {
         result = "You Win! :)";
         win++;
-        game++;
     } if (playerSelection === "paper" && computerSelection === "rock") {
         result = "You Win! :)";
         win++;
-        game++;
     } if (playerSelection === "scissors" && computerSelection === "paper") {
         result = "You Win! :)";
         win++;
-        game++;
     } if (playerSelection === "scissors" && computerSelection === "rock") {
         result = "You Lose! :(";
         lose++;
-        game++;
     } if (playerSelection === "rock" && computerSelection === "paper") {
         result = "You Lose! :(";
         lose++;
-        game++;
     } if (playerSelection === "paper" && computerSelection === "scissors") {
         result = "You Lose! :(";
         lose++;
-        game++;
     }
     
     content.textContent = `You chose ${playerSelection} Computer chose ${computerSelection}! 
-    ${result} Player ${win} - Computer ${lose} ${game}`;
+    ${result} Player ${win} - Computer ${lose}`;
     
-    if (game === 5 && win > lose) {
-        game = 0;
+    if (win === 5 && win > lose) {
         win = 0;
         lose = 0;
         content.textContent = "Player Wins!";
-    } if (game === 5 && lose > win) {
-        game = 0;
+    } if (lose === 5 && lose > win) {
         win = 0;
         lose = 0;
         content.textContent = "Computer Wins!";
