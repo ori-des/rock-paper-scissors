@@ -2,9 +2,9 @@ const rockBtn = document.querySelector(`#rock`);
 const paperBtn = document.querySelector(`#paper`);
 const scissorsBtn = document.querySelector(`#scissors`);
 
-rock.addEventListener(`click`, () => playRound('rock'));
-paper.addEventListener(`click`, () => playRound('paper'));
-scissors.addEventListener(`click`, () => playRound('scissors'));
+rockBtn.addEventListener(`click`, () => playRound('rock'));
+paperBtn.addEventListener(`click`, () => playRound('paper'));
+scissorsBtn.addEventListener(`click`, () => playRound('scissors'));
 
 function getComputerChoice() {
     let number = Math.floor(Math.random() * 3);
