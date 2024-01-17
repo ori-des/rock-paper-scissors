@@ -57,13 +57,24 @@ function playRound(playerSelection, computerSelection) {
         result = "You Lose! :(";
         lose++;
         game++;
-    }  if (game === "5" && win > lose) {
-        result = "Player Wins!";
-    } if (game === "5" && lose > win) {
-        result = "Computer Wins!";
+    }
+    
+    content.textContent = `You chose ${playerSelection} Computer chose ${computerSelection}! 
+    ${result} Player ${win} - Computer ${lose} ${game}`;
+    
+    if (game === 5 && win > lose) {
+        game = 0;
+        win = 0;
+        lose = 0;
+        content.textContent = "Player Wins!";
+    } if (game === 5 && lose > win) {
+        game = 0;
+        win = 0;
+        lose = 0;
+        content.textContent = "Computer Wins!";
     } 
      
-    content.textContent = `You chose ${playerSelection} Computer chose ${computerSelection}! ${result} ${win} ${lose} ${game}`
+    
 };
 
 function playGame() {
