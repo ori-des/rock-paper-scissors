@@ -1,3 +1,11 @@
+const rockBtn = document.querySelector(`#rock`);
+const paperBtn = document.querySelector(`#paper`);
+const scissorsBtn = document.querySelector(`#scissors`);
+
+rock.addEventListener(`click`, () => playRound('rock'));
+paper.addEventListener(`click`, () => playRound('paper'));
+scissors.addEventListener(`click`, () => playRound('scissors'));
+
 function getComputerChoice() {
     let number = Math.floor(Math.random() * 3);
     if (number === 0) {
@@ -9,13 +17,7 @@ function getComputerChoice() {
     }
 };
 
-function getPlayerChoice() {
-    let playerSelection = rock.id;
-    return playerSelection;
-};
-
 function playRound(playerSelection, computerSelection) {
-    playerSelection = getPlayerChoice();
     computerSelection = getComputerChoice();
     console.log(`You chose ${playerSelection} Computer chose ${computerSelection}!`)
     if (playerSelection === computerSelection) {
@@ -54,18 +56,3 @@ function playGame() {
         result = "Computer Wins!";
     } return result;
 };
-
-function getAlert(e) {
-    console.log(e.target.id)
-    alert("!!!");
-}
-
-const rockBtn = document.querySelector(`#rock`);
-const paperBtn = document.querySelector(`#paper`);
-const scissorsBtn = document.querySelector(`#scissors`);
-
-// paper.addEventListener(`click`, playRound);
-// scissors.addEventListener(`click`, playRound);
-rock.addEventListener(`click`, playRound);
-paper.addEventListener(`click`, playRound);
-scissors.addEventListener(`click`, playRound);
