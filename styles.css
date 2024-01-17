@@ -5,3 +5,12 @@ body {
     justify-content: center;
     gap: 15px;
 }
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    padding: 3px 30px;
+}
