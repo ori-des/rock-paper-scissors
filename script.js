@@ -59,4 +59,4 @@ function playGame() {
 };
 
 
-console.log(playGame());
+console.log(playRound());
