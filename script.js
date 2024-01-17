@@ -9,6 +9,12 @@ function getComputerChoice() {
     }
 };
 
+let rockBtn = document.querySelector('#rock');
+let paperBtn = document.querySelector('#paper');
+let scissorsBtn = document.querySelector('#scissors');
+
+
+
 function getPlayerChoice() {
     let playerSelection = prompt("Rock, Paper or Scissors?").toLowerCase()
     while (playerSelection !== "rock" && playerSelection !== "paper" && playerSelection !== "scissors") {
