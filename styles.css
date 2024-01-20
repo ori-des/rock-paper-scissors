@@ -34,3 +34,13 @@ img:hover {
       flex-direction: column;
     }
 }
+
+h1 {
+    font-size: 70px;
+    text-shadow: 3px 1px #B594B1;
+}
+
+p {
+    font-size: xx-large;
+    font-weight: bold;
+}
