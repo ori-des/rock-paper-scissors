@@ -4,6 +4,8 @@ body {
     align-items: center;
     justify-content: center;
     gap: 15px;
+    color: #4d213a;
+    background-color: #fdfdfe;
 }
 
 .buttons {
@@ -12,5 +14,23 @@ body {
 }
 
 button {
-    padding: 3px 30px;
+    background-color: transparent;
+    border-style: hidden;
+}
+
+img {
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #B594B1;
+}
+
+img:hover {
+    box-shadow: 5px 10px #4d213a;
+    border-color: #4d213a;
+}
+
+@media only screen and (max-width: 760px) {
+    .buttons {
+      flex-direction: column;
+    }
 }
